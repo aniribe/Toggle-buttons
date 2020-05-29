@@ -6,11 +6,17 @@
 
 body {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: 2rem;
   background: #dde1e7;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  width: 80%;
 }
 
 input[type="checkbox"] {
@@ -28,9 +34,13 @@ input[type="checkbox"] {
   width: 300px;
   border-radius: 5px;
   margin-top: 1rem;
+  margin-right: 1rem;
   background: #dde1e7;
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
+
+/** Button 1
+*************/
 
 .button-container .toggle {
   height: 40px;
@@ -304,11 +314,12 @@ input[type="checkbox"] {
   width: 11rem;
   height: 3.5rem;
   border-radius: 2rem;
+  border: 0.5px solid rgb(160, 160, 160);
   padding: 0.7rem;
   background: linear-gradient(#f1f1f1);
   box-shadow: 0.5px 1px 2px rgb(252, 252, 252),
-    inset 1px 1px 2px 1px rgb(170, 170, 170),
-    inset -1px -2px 1px rgb(182, 182, 182), inset 1px 1px 1px rgb(197, 197, 197);
+    inset 1px 1px 2px 1px rgb(192, 192, 192),
+    inset -1px -2px 1px rgb(197, 197, 197), inset 1px 1px 1px rgb(197, 197, 197);
 }
 
 .toggle5 input {
@@ -384,4 +395,327 @@ input[type="checkbox"] {
 
 .toggle5.active::after {
   right: 9%;
+}
+
+.toggle5 i {
+  position: absolute;
+  top: 32%;
+  left: 28%;
+  color: #3263ac;
+  font-size: 1.4rem;
+  z-index: 1;
+  transition: left 0.3s cubic-bezier(0.9, 0.15, 0.8, 1.4);
+}
+
+.toggle5.active i {
+  left: 58%;
+  color: #868686;
+}
+
+/** Button 6
+*************/
+.toggle6 {
+  position: relative;
+  width: 8rem;
+  height: 2.8rem;
+  border-radius: 2rem;
+  padding: 0.4rem;
+  background: linear-gradient(#dde1e7, #d7d8da);
+  box-shadow: 1px 1px 1px rgb(180, 180, 180), -1px -1px 1px rgb(253, 253, 253);
+}
+
+.toggle6 input {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background: linear-gradient(#aaaaaa, rgba(130, 130, 130, 0.9), #8f8e8e);
+  box-shadow: inset 1px -1px 5px rgb(0, 0, 0, 0.4),
+    inset 2px 1px 5px rgb(0, 0, 0, 0.3);
+}
+
+.toggle6 input:checked {
+  background: linear-gradient(#5ec7ff, rgba(31, 158, 221, 0.8), #3cb0ed);
+}
+
+.toggle6 input::before {
+  position: absolute;
+  content: "";
+  width: 3.5rem;
+  height: 3.5rem;
+  top: -13%;
+  left: -10%;
+  border-radius: 50%;
+  background: linear-gradient(#dde1e7, #d7d8da);
+  box-shadow: -1px -1px 1px rgb(255, 255, 255), 0px 1px 5px rgb(0, 0, 0, 0.7);
+  transition: left 0.3s cubic-bezier(0.9, 0.15, 0.8, 1.4);
+}
+
+.toggle6 input:checked::before {
+  left: 60%;
+  box-shadow: -1px -1px 1px rgb(255, 255, 255),
+    -0px 6px 15px -3px rgb(0, 0, 0, 0.7),
+    -7px -3px 8px -2px rgba(105, 161, 245, 0.7),
+    inset 1px 0px 5px rgba(129, 179, 255, 0.5);
+}
+
+.toggle6 i {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  font-size: 1.5rem;
+  color: rgb(128, 128, 128);
+  transition: left 0.3s cubic-bezier(0.9, 0.15, 0.8, 1.4);
+}
+
+.toggle6 input:checked + i {
+  left: 75%;
+  color: #26a8ee;
+  text-shadow: -1px 1px 0px rgb(12, 12, 12, 0.5);
+}
+
+/** Button 7
+*************/
+
+.toggle7 {
+  position: relative;
+  width: 8rem;
+  height: 3rem;
+  /* border: 1.5px solid rgba(160, 160, 160, 0.5); */
+  border-radius: 2rem;
+  background: linear-gradient(#e9e9e9 50%, #d3d3d3);
+  box-shadow: inset -1px 1px 3px rgba(112, 112, 112, 0.3),
+    inset 0px 0px 4px rgba(5, 5, 5, 0.5), -0px 1px 1px rgb(241, 241, 241);
+}
+
+.toggle7::before {
+  position: absolute;
+  content: "";
+  width: 2.8rem;
+  height: 2.8rem;
+  top: 0;
+  left: 1%;
+  border-radius: 50%;
+  padding: 0.4rem;
+  z-index: 1;
+  box-sizing: border-box;
+  background: linear-gradient(#e7e7e7 50%, #cacaca);
+  box-shadow: 1px 3px 8px rgba(56, 56, 56, 0.5),
+    inset -0px -1px 1px rgb(37, 37, 37, 0.3), 1px -1px 3px rgba(44, 44, 44, 0.3);
+  transition: left 0.3s cubic-bezier(0.9, 0.15, 0.8, 1.4);
+}
+
+.toggle7.active::before {
+  left: 64%;
+}
+
+.toggle7::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  top: 13%;
+  right: 69%;
+  border-radius: 50%;
+  z-index: 1;
+  background: url("images/texture.jpg");
+  box-shadow: inset 0px 0px 5px rgb(17, 17, 17, 0.6),
+    0px 2px 1px rgb(238, 238, 238), 0px -2px 1px rgb(235, 235, 235);
+  transition: right 0.3s cubic-bezier(0.9, 0.15, 0.8, 1.4);
+}
+
+.toggle7.active::after {
+  right: 6%;
+}
+
+.toggle7 input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  z-index: 0;
+}
+
+.toggle7 input::before {
+  position: absolute;
+  content: "ON";
+  top: 30%;
+  left: 10%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7b9e11;
+}
+
+.toggle7 input::after {
+  position: absolute;
+  content: "OFF";
+  top: 30%;
+  right: 10%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a8a8a8;
+}
+
+.tick {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(179, 179, 179);
+  margin-left: 0.6rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2.5rem;
+  background: #dbdbdb;
+  box-shadow: 0px 1px 1px rgb(248, 248, 248), 0px -1px 1px rgb(235, 235, 235),
+    inset 0px 2px 5px rgba(179, 179, 179, 0.6);
+  transition: all 0.3s;
+}
+
+.tick i {
+  visibility: hidden;
+  color: #7b9e11;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle7.active + .tick {
+  background: linear-gradient(#eeeeee 40%, #c7c7c7);
+  box-shadow: 1px 3px 7px -2px rgb(34, 34, 34, 0.6),
+    -1px -1px 6px rgb(211, 211, 211);
+}
+
+.toggle7.active + .tick i {
+  visibility: visible;
+}
+
+/** Button 8
+*************/
+.toggle8 {
+  position: relative;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 2rem;
+  /* background: red; */
+  box-shadow: 0px 1px 1px rgb(255, 255, 255),
+    inset 0px 10px 13px rgba(48, 48, 48, 0.5), 0px -1px 1px rgb(255, 255, 255),
+    inset 0px 1px 2px 0px rgba(46, 46, 46, 0.5),
+    inset -0px -5px 6px rgb(255, 255, 255);
+}
+
+.toggle8 input {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  left: 5%;
+  top: 8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at top left,
+    rgb(255, 8, 8) 30%,
+    rgb(151, 4, 4) 65%
+  );
+  box-shadow: 3px 6px 4px -2px rgba(0, 0, 0, 0.6),
+    0px 5px 3px -2px rgba(58, 58, 58, 0.6);
+  transition: left 0.3s cubic-bezier(0.9, 0.15, 0.8, 1.4);
+}
+
+.toggle8 input:checked {
+  left: 64%;
+}
+
+.toggle8::before,
+.toggle8::after {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  top: 35%;
+  border-radius: 50%;
+}
+
+.toggle8::before {
+  left: -18%;
+  background: linear-gradient(#67e004, #4f9202);
+  box-shadow: 0px 2px 1px rgb(252, 252, 252),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.toggle8.active::before {
+  left: -18%;
+  background: linear-gradient(#dbdbdb, #cfcfcf);
+  box-shadow: 0px 2px 1px rgb(252, 252, 252),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.toggle8.active::after {
+  right: -18%;
+  background: linear-gradient(rgb(255, 8, 8), rgb(177, 3, 3));
+  box-shadow: 0px 2px 1px rgb(252, 252, 252),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.toggle8::after {
+  right: -18%;
+  background: linear-gradient(#dbdbdb, #cfcfcf);
+  box-shadow: 0px 2px 1px rgb(252, 252, 252),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/** Button 9
+*************/
+
+.toggle9 {
+  position: relative;
+  width: 8rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(rgba(199, 199, 199, 0.6), rgb(228, 228, 228));
+  box-shadow: 0px 1px 1px rgb(248, 248, 248), 0px -1px 0.5px rgb(114, 114, 114),
+    inset -1px -1px 5px rgb(248, 248, 248);
+}
+
+.toggle9 input {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border: 0.5px solid rgb(145, 145, 145);
+  background: linear-gradient(
+    90deg,
+    rgb(247, 246, 246) 40%,
+    rgba(207, 207, 207, 0.6)
+  );
+  box-shadow: -6px 3px 2px -4.5px rgba(0, 0, 0, 0.3),
+    inset -1px 0 3px rgba(141, 141, 141, 0.5);
+}
+
+.toggle9 input:checked {
+  background: linear-gradient(
+    90deg,
+    rgba(207, 207, 207, 0.6),
+    rgb(247, 246, 246) 40%
+  );
+  box-shadow: 6px 3px 2px -4.5px rgba(0, 0, 0, 0.3),
+    inset 1px 0 3px rgba(141, 141, 141, 0.5);
+}
+
+.toggle9 .fa-microphone {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  color: orange;
+}
+
+.toggle9 .fa-microphone-alt-slash {
+  position: absolute;
+  top: 35%;
+  right: 15%;
+  color: grey;
+}
+
+.toggle9 input:checked + .fa-microphone {
+  color: grey;
+}
+
+.toggle9 input:checked ~ .fa-microphone-alt-slash {
+  color: orange;
 }
